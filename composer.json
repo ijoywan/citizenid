@@ -1,13 +1,13 @@
 {
-    "name": "cszchen/citizenid",
+    "name": "ijoywan/citizenid",
     "type": "extension",
     "description": "中国居民身份证号码信息验证",
     "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
         {
-            "name": "cszchen",
-            "email": "csz@soyhw.com"
+            "name": "iyufei520",
+            "email": "iyufei520@163.com"
         }
     ],
     "require": {},
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "cszchen\\citizenid\\": ""
+            "ijoywan\\citizenid\\": ""
         }
     }
 }

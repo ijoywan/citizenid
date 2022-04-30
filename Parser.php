@@ -1,6 +1,6 @@
 <?php
 
-namespace cszchen\citizenid;
+namespace ijoywan\citizenid;
 
 /**
  * 
@@ -130,9 +130,9 @@ class Parser
     public function getGender()
     {
         if ($this->idLength == 18) {
-            $gender = $this->idNumber{16};
+            $gender = $this->idNumber[16];
         } else {
-            $gender = $this->idNumber{14};
+            $gender = $this->idNumber[14];
         }
         return $gender % 2 == 0 ? self::GENDER_FEMALE : self::GENDER_MALE;
     }
@@ -210,10 +210,10 @@ class Parser
         $sum = 0;
         $number = (string) $this->idNumber;
         for ($i = 0; $i < 17; $i ++) {
-            $sum += $number{$i} * $this->salt{$i};
+            $sum += $number[$i] * $this->salt[$i];
         }
         $seek = $sum % 11;
-        if ((string) $this->checksum[$seek] !== strtoupper($number{17})) {
+        if ((string) $this->checksum[$seek] !== strtoupper($number[17])) {
             return false;
         }
         return true;

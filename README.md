@@ -1,15 +1,17 @@
 检验一个身份证号码的格式是否正确，并且可以获取到生日，性别，办证区域
 
+P.S. 此包来自 `cszchen\citizenid` 因为那个包都不在了，所以只能自己传一个
+
 安装
 ===
 
-`composer require cszchen/citizenid`
+`composer require ijoywan/citizenid`
 
 使用
 ===
 
 ```php
-use cszchen\citizenid;
+use ijoywan\citizenid;
     
 $parser = new Parser();
 $parser->setId($id);
